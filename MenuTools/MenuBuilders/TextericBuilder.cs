@@ -7,14 +7,16 @@ namespace MenuTools.MenuBuilders
     {
         public List<string> ItemsText { get; set; }
         private int CleanSpace => ItemsText.Select(x => x.Length).Max();
+        public ConsoleColor TextColor { get; set; } = ConsoleColor.White;
+        public ConsoleColor ArowColor { get; set; } = ConsoleColor.White;
+
 
         public TextericBuilder(int posX, int posY, bool quitOn) : base(posX, posY, quitOn)
         {
         }
 
-        public ConsoleColor TextColor { get; set; } = ConsoleColor.White;
-        public ConsoleColor ArowColor { get; set; } = ConsoleColor.White;
         public override void ResetSelectIndex() => _selectedIndex = 0;
+
 
         public int RunTexteric(Mod mod)
         {
@@ -75,6 +77,7 @@ namespace MenuTools.MenuBuilders
             return _selectedIndex;
         }
 
+
         private void DrawTextericVertical(int index)
         {
 
@@ -89,6 +92,7 @@ namespace MenuTools.MenuBuilders
                 }
             }
         }
+
 
         private void DrawTextericHotizontal(int index)
         {

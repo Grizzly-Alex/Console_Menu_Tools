@@ -28,9 +28,11 @@ namespace MenuTools.MenuBuilders
             _itemsRange.start.ToString().Length >= _itemsRange.end.ToString().Length ? 
             _itemsRange.start.ToString().Length : _itemsRange.end.ToString().Length;
 
+
         public NumericBuilder(int posX, int posY, bool quitOn) : base(posX, posY, quitOn)
         {
         }
+
 
         public override void ResetSelectIndex() => _selectedIndex = _itemsRange.start;
 
@@ -91,6 +93,7 @@ namespace MenuTools.MenuBuilders
             return _selectedIndex;
         }
 
+
         private void DrawNumericVertical(int index)
         {
             for (int i = 0; i < 3; i++)
@@ -104,6 +107,7 @@ namespace MenuTools.MenuBuilders
                 }
             }
         }
+
 
         private void DrawNumericHotizontal(int index)
         {
